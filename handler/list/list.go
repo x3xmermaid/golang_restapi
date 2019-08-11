@@ -20,7 +20,7 @@ func ShowAllLists(w http.ResponseWriter, r *http.Request) {
 	db := database.Connect()
 	defer db.Close()
 
-	SQL := "select * from List"
+	SQL := "select * from list"
 
 	queryID := r.URL.Query().Get("id")
 	querySearch := r.URL.Query().Get("search")
@@ -31,7 +31,7 @@ func ShowAllLists(w http.ResponseWriter, r *http.Request) {
 
 	} else if querySearch != "" {
 
-		SQL = "select * from List where name like '%" + querySearch + "%'"
+		SQL = "select * from list where name like '%" + querySearch + "%'"
 
 	}
 
@@ -182,4 +182,12 @@ func DeleteList(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
+}
+
+func Test(w http.ResponseWriter, r *http.Request) {
+	r.ParseForm() // Parses the request body
+	x := r.Form.Get("search")
+	// querySearch := r.URL.Query()
+
+	w.Write([]byte(x))
 }

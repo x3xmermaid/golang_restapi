@@ -18,6 +18,7 @@ func main() {
 
 	//Routes
 	router.HandleFunc("/list", listController.ShowAllLists).Methods("GET")
+	router.HandleFunc("/list2", listController.Test).Methods("GET")
 	router.HandleFunc("/list", listController.InsertList).Methods("POST")
 	router.HandleFunc("/list/{id:[0-9]+}", listController.UpdateList).Methods("PUT")
 	router.HandleFunc("/list/{id:[0-9]+}", listController.DeleteList).Methods("DELETE")
