@@ -1,5 +1,28 @@
 # <h1>golang_restapi</h1>
 
+end point select <br>
+/list <br>
+/list?search=(nama list)<br>
+/category
+
+end point delete <br>
+/list/(id)<br>
+/category/(id)
+
+end point insert <br>
+/list<br>
+/category
+
+end point update<br>
+/list/(id)<br>
+/category
+
+json body untuk update insert data list<br>
+{	<br>
+	"Name": "Gol",<br>
+	"CategoryID": "1"<br>
+}<br>
+
 docker hub link => https://cloud.docker.com/repository/docker/x3xmermaid/golang_api
 
 untuk menjalankan docker golang api menggunakan docker mysql
