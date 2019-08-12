@@ -8,9 +8,9 @@ type Category struct {
 
 //List Model
 type List struct {
-	ID         string `form:"id" json:"id"`
-	Name       string `form:"name" json:"name"`
-	CategoryID string `form:"CategoryID" json:"CategoryID"`
+	ID           string `form:"id" json:"id"`
+	Name         string `form:"name" json:"name"`
+	CategoryName string `form:"CategoryID" json:"CategoryID"`
 }
 
 //ResponseCategory for response
